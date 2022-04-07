@@ -48,7 +48,7 @@ namespace Фгещк
             }
             else
             {
-                MessageBox.Show("Пользователя с таким логином нет");
+                MessageBox.Show("Пользователя с таким логином и паролем нет");
                 return;
             }
         }
