@@ -29,7 +29,7 @@ namespace Фгещк
                 return;
             }
             User usr = db.Users.Find(textBox1.Text);
-            if (usr != null && usr.Psw == textBox2.Text)
+            if ((usr != null) && (usr.Psw == textBox2.Text))
             {
                 USER = usr;
                 FORMA = this;
@@ -45,11 +45,11 @@ namespace Фгещк
                     frm.Show();
                     this.Hide();
                 }
-                else
-                {
-                    MessageBox.Show("Пользователя с таким логином нет");
-                    return;
-                }
+            }
+            else
+            {
+                MessageBox.Show("Пользователя с таким логином нет");
+                return;
             }
         }
 
