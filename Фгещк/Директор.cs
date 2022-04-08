@@ -12,6 +12,7 @@ namespace Фгещк
 {
     public partial class Директор : Form
     {
+        static bool appclose = false;
         public Директор()
         {
             InitializeComponent();
@@ -24,11 +25,18 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
+            appclose = true;
             this.Close();
             Вход.FORMA.Show();
         }
 
         private void Директор_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (appclose = false)
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

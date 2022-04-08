@@ -27,5 +27,10 @@ namespace Фгещк
         {
             label1.Text = "Добрый день, " + Вход.USER.Name;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

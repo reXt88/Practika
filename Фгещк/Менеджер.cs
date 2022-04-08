@@ -12,6 +12,7 @@ namespace Фгещк
 {
     public partial class Менеджер : Form
     {
+        static bool appclose = false;
         public Менеджер()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
+            appclose = true;
             this.Close();
             Вход.FORMA.Show();
         }
@@ -39,6 +41,12 @@ namespace Фгещк
         }
 
         private void Менеджер_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (appclose = false)
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

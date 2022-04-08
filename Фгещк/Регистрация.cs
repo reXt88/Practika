@@ -13,6 +13,7 @@ namespace Фгещк
 {
     public partial class Регистрация : Form
     {
+        static bool appclose = false;
         public Регистрация()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
+            appclose = true;
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox5.Text == "")
             {
                 MessageBox.Show("Нужно задать все данные");
@@ -74,11 +76,19 @@ namespace Фгещк
 
         private void button2_Click(object sender, EventArgs e)
         {
+            appclose = true;
             this.Close();
             Вход.FORMA.Show();
         }
 
         private void Регистрация_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!appclose)
+                Application.Exit();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
