@@ -39,6 +39,7 @@ namespace Фгещк
         {
             Учетная_запись frm = new Учетная_запись();
             frm.Show();
+            frm.Owner = this;
             this.Hide();
         }
 

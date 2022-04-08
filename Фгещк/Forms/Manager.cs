@@ -12,7 +12,6 @@ namespace Фгещк
 {
     public partial class Manager : Form
     {
-        static bool appclose = false;
         public Manager()
         {
             InitializeComponent();
@@ -30,9 +29,8 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
-            appclose = true;
             this.Close();
-            Entry.FORMA.Show();
+            Entry.FORMA.MyShow();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -42,8 +40,6 @@ namespace Фгещк
 
         private void Менеджер_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (appclose = false)
-            Application.Exit();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -55,6 +51,14 @@ namespace Фгещк
         {
             Cllients frm = new Cllients();
             frm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Учетная_запись frm = new Учетная_запись();
+            frm.Show();
+            frm.owner = this;
+            this.Hide();
         }
     }
 }

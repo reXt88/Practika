@@ -18,6 +18,7 @@ namespace Фгещк
             this.Show();
             label3.Text = Смена_пароля.USER.Psw;
         }
+        public Form owner;
         public static Учетная_запись FORMA { get; set; }
         public Учетная_запись()
         {
@@ -47,7 +48,7 @@ namespace Фгещк
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            DefaulUser.FORMA.Show();
+            owner.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Фгещк.Users;
 
 namespace Фгещк
 {
@@ -21,6 +22,11 @@ namespace Фгещк
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "primerDataSet.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.primerDataSet.Clients);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

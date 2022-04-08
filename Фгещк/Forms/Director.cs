@@ -27,7 +27,7 @@ namespace Фгещк
         {
             appclose = true;
             this.Close();
-            Entry.FORMA.Show();
+            Entry.FORMA.MyShow();
         }
 
         private void Директор_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,6 +39,14 @@ namespace Фгещк
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Учетная_запись frm = new Учетная_запись();
+            frm.Show();
+            frm.owner = this;
+            this.Hide();
         }
     }
 }
