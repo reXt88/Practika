@@ -38,7 +38,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(102, 79);
+            this.label1.Location = new System.Drawing.Point(116, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(622, 30);
             this.label1.TabIndex = 0;
@@ -79,9 +79,9 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Менеджер";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Информационная система - форма менеджера";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Менеджер_FormClosing);
             this.Load += new System.EventHandler(this.Form3_Load);
