@@ -10,27 +10,37 @@ using System.Windows.Forms;
 
 namespace Фгещк
 {
-    public partial class Директор : Form
+    public partial class Manager : Form
     {
         static bool appclose = false;
-        public Директор()
+        public Manager()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = "Добрый день, " + Вход.USER.Name;
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             appclose = true;
             this.Close();
-            Вход.FORMA.Show();
+            Entry.FORMA.Show();
         }
 
-        private void Директор_FormClosing(object sender, FormClosingEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Менеджер_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (appclose = false)
             Application.Exit();
@@ -39,6 +49,12 @@ namespace Фгещк
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cllients frm = new Cllients();
+            frm.Show();
         }
     }
 }

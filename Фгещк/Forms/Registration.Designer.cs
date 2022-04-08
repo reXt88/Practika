@@ -1,6 +1,6 @@
 ﻿namespace Фгещк
 {
-    partial class Регистрация
+    partial class Registration
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Регистрация));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.button2.Location = new System.Drawing.Point(404, 334);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 40);
+            this.button2.Size = new System.Drawing.Size(175, 55);
             this.button2.TabIndex = 6;
             this.button2.Text = "Выход";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,11 +108,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(281, 334);
+            this.button1.Location = new System.Drawing.Point(223, 334);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 40);
+            this.button1.Size = new System.Drawing.Size(175, 55);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Регистрация";
+            this.button1.Text = "Зарегистрироваться";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

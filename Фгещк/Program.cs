@@ -16,7 +16,7 @@ namespace Фгещк
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Вход());
+            Application.Run(new Entry());
         }
     }
 }

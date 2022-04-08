@@ -11,10 +11,9 @@ using Фгещк.Users;
 
 namespace Фгещк
 {
-    public partial class Администратор : Form
+    public partial class Administrator : Form
     {
-        static bool appclose;
-        public Администратор()
+        public Administrator()
         {
             InitializeComponent();
         }
@@ -39,14 +38,12 @@ namespace Фгещк
 
         private void button2_Click(object sender, EventArgs e)
         {
-            appclose = true;
             this.Close();
-            Вход.FORMA.MyShow();
+            Entry.FORMA.MyShow();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            appclose = true;
             User usr = db.Users.Find(textBox1.Text);
             usr = db.Users.Remove(usr);
             try
@@ -62,8 +59,7 @@ namespace Фгещк
 
         private void Администратор_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (appclose = false)
-            Application.Exit();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

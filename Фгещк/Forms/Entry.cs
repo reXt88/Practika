@@ -11,13 +11,13 @@ using Фгещк.Users;
 
 namespace Фгещк
 {
-    public partial class Вход : Form
+    public partial class Entry : Form
     {
-        public Вход()
+        public Entry()
         {
             InitializeComponent();
         }
-        public static Вход FORMA { get; set; }
+        public static Entry FORMA { get; set; }
         public static User USER { get; set; }
         public void MyShow()
         {
@@ -25,7 +25,6 @@ namespace Фгещк
             textBox1.Text = "";
             textBox2.Text = "";
         }
-        Model3 db = new Model3();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -42,25 +41,25 @@ namespace Фгещк
                 FORMA = this;
                 if (usr.Role == "Директор")
                 {
-                    Директор frm = new Директор();
+                    Director frm = new Director();
                     frm.Show();
                     this.Hide();
                 }
                 else if (usr.Role == "Менеджер")
                 {
-                    Менеджер frm = new Менеджер();
+                    Manager frm = new Manager();
                     frm.Show();
                     this.Hide();
                 }
                 else if (textBox1.Text == "admin" && textBox2.Text == "admin")
                 {
-                    Администратор frm = new Администратор();
+                    Administrator frm = new Administrator();
                     frm.Show();
                     this.Hide();
                 }
                 else if ((usr.Role == "Пользователь"))
                 {
-                    Пользователь frm = new Пользователь();
+                    DefaulUser frm = new DefaulUser();
                     frm.Show();
                     this.Hide();
                 }
@@ -74,7 +73,7 @@ namespace Фгещк
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Регистрация frm = new Регистрация();
+            Registration frm = new Registration();
             FORMA = this;
             this.Hide();
             frm.Show();

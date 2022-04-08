@@ -1,6 +1,6 @@
 ﻿namespace Фгещк
 {
-    partial class Администратор
+    partial class Administrator
     {
         /// <summary>
         /// Required designer variable.

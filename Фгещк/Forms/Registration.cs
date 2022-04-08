@@ -11,10 +11,10 @@ using Фгещк.Users;
 
 namespace Фгещк
 {
-    public partial class Регистрация : Form
+    public partial class Registration : Form
     {
         static bool appclose = false;
-        public Регистрация()
+        public Registration()
         {
             InitializeComponent();
         }
@@ -64,7 +64,7 @@ namespace Фгещк
                 return;
             }
             MessageBox.Show($"Пользователь {usr.Login} зарегистрирован");
-            Вход.FORMA.MyShow();
+            Entry.FORMA.MyShow();
             this.Close();
             return;
         }
@@ -78,7 +78,7 @@ namespace Фгещк
         {
             appclose = true;
             this.Close();
-            Вход.FORMA.MyShow();
+            Entry.FORMA.MyShow();
         }
 
         private void Регистрация_FormClosing(object sender, FormClosingEventArgs e)

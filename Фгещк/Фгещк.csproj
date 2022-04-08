@@ -55,76 +55,128 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Add User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add User.Designer.cs">
+      <DependentUpon>Add User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrimerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Вход.cs">
+    <Compile Include="Forms\Entry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Вход.Designer.cs">
-      <DependentUpon>Вход.cs</DependentUpon>
+    <Compile Include="Forms\Entry.Designer.cs">
+      <DependentUpon>Entry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Директор.cs">
+    <Compile Include="Forms\Director.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Директор.Designer.cs">
-      <DependentUpon>Директор.cs</DependentUpon>
+    <Compile Include="Forms\Director.Designer.cs">
+      <DependentUpon>Director.cs</DependentUpon>
     </Compile>
-    <Compile Include="Менеджер.cs">
+    <Compile Include="Forms\Cllients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Менеджер.Designer.cs">
-      <DependentUpon>Менеджер.cs</DependentUpon>
+    <Compile Include="Forms\Cllients.Designer.cs">
+      <DependentUpon>Cllients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Регистрация.cs">
+    <Compile Include="Forms\Manager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Регистрация.Designer.cs">
-      <DependentUpon>Регистрация.cs</DependentUpon>
+    <Compile Include="Forms\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Администратор.cs">
+    <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Администратор.Designer.cs">
-      <DependentUpon>Администратор.cs</DependentUpon>
+    <Compile Include="Forms\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Пользователь.cs">
+    <Compile Include="Forms\Administrator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Пользователь.Designer.cs">
-      <DependentUpon>Пользователь.cs</DependentUpon>
+    <Compile Include="Forms\Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefaulUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefaulUser.Designer.cs">
+      <DependentUpon>DefaulUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="qwe\Model3.cs" />
     <Compile Include="qwe\Users.cs" />
-    <EmbeddedResource Include="Вход.resx">
-      <DependentUpon>Вход.cs</DependentUpon>
+    <Compile Include="Forms\Change password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Change password.Designer.cs">
+      <DependentUpon>Change password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User account.Designer.cs">
+      <DependentUpon>User account.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Add User.resx">
+      <DependentUpon>Add User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Директор.resx">
-      <DependentUpon>Директор.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Entry.resx">
+      <DependentUpon>Entry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Менеджер.resx">
-      <DependentUpon>Менеджер.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Director.resx">
+      <DependentUpon>Director.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Регистрация.resx">
-      <DependentUpon>Регистрация.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Cllients.resx">
+      <DependentUpon>Cllients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Администратор.resx">
-      <DependentUpon>Администратор.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Пользователь.resx">
-      <DependentUpon>Пользователь.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefaulUser.resx">
+      <DependentUpon>DefaulUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Change password.resx">
+      <DependentUpon>Change password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User account.resx">
+      <DependentUpon>User account.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PrimerDataSet.xsc">
+      <DependentUpon>PrimerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrimerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrimerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrimerDataSet.xss">
+      <DependentUpon>PrimerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

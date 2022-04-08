@@ -12,6 +12,7 @@ namespace Фгещк
         {
         }
 
+        public object USER { get; internal set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
