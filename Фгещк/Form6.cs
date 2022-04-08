@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Фгещк
 {
-    public partial class Form3 : Form
+    public partial class Form6 : Form
     {
-        public Form3()
+        public Form6()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            label1.Text = "Добрый день, " + Form1.USER.Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,9 +23,9 @@ namespace Фгещк
             Form1.FORMA.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
-
+            label1.Text = "Добрый день," + Form1.USER.Name;
         }
     }
 }

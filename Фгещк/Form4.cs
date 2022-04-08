@@ -25,7 +25,7 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox5.Text == "")
             {
                 MessageBox.Show("Нужно задать все данные");
                 return;
@@ -33,11 +33,6 @@ namespace Фгещк
             if (textBox2.Text != textBox3.Text)
             {
                 MessageBox.Show("Значение паролей не совпадают");
-                return;
-            }
-            if (textBox4.Text != "Директор" && textBox4.Text != "Менеджер" && textBox4.Text != "Заказчик" && textBox4.Text != "Бухгалтер")
-            {
-                MessageBox.Show("Задана неверная роль");
                 return;
             }
             User usr = db.Users.Find(textBox1.Text);
@@ -49,7 +44,7 @@ namespace Фгещк
             usr = new User();
             usr.Login = textBox1.Text;
             usr.Psw = textBox2.Text;
-            usr.Role = textBox4.Text;
+            usr.Role = "Пользователь";
             usr.Name = textBox5.Text;
             db.Users.Add(usr);
             try

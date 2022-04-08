@@ -45,10 +45,22 @@ namespace Фгещк
                     frm.Show();
                     this.Hide();
                 }
+                else if (usr.Role == "Администратор")
+                {
+                    Form5 frm = new Form5();
+                    frm.Show();
+                    this.Hide();
+                }
+                else if ((usr.Role == "Пользователь"))
+                {
+                    Form6 frm = new Form6();
+                    frm.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                MessageBox.Show("Пользователя с таким логином нет");
+                MessageBox.Show("Пользователя с таким логином и паролем нет");
                 return;
             }
         }
