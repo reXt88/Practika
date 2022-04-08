@@ -88,5 +88,10 @@ namespace Фгещк
         {
             Application.Exit();
         }
+
+        private void Вход_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

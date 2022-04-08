@@ -139,10 +139,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\screen-0.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vector-scissors-icon-design.png" />
+    <None Include="Resources\abstrakciya-boke-uzory.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

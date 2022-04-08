@@ -63,6 +63,16 @@ namespace Фгещк.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abstrakciya_boke_uzory {
+            get {
+                object obj = ResourceManager.GetObject("abstrakciya-boke-uzory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap screen_0 {
             get {
                 object obj = ResourceManager.GetObject("screen-0", resourceCulture);
