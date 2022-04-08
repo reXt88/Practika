@@ -23,6 +23,7 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Model3 db = new Model3();
             if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("Нужно задать логин и пароль");
