@@ -11,13 +11,13 @@ using Фгещк.Users;
 
 namespace Фгещк
 {
-    public partial class Form1 : Form
+    public partial class Вход : Form
     {
-        public Form1()
+        public Вход()
         {
             InitializeComponent();
         }
-        public static Form1 FORMA { get; set; }
+        public static Вход FORMA { get; set; }
         public static User USER { get; set; }
         Model3 db = new Model3();
 
@@ -35,25 +35,25 @@ namespace Фгещк
                 FORMA = this;
                 if (usr.Role == "Директор")
                 {
-                    Form2 frm = new Form2();
+                    Директор frm = new Директор();
                     frm.Show();
                     this.Hide();
                 }
                 else if (usr.Role == "Менеджер")
                 {
-                    Form3 frm = new Form3();
+                    Менеджер frm = new Менеджер();
                     frm.Show();
                     this.Hide();
                 }
                 else if (usr.Role == "Администратор")
                 {
-                    Form5 frm = new Form5();
+                    Администратор frm = new Администратор();
                     frm.Show();
                     this.Hide();
                 }
                 else if ((usr.Role == "Пользователь"))
                 {
-                    Form6 frm = new Form6();
+                    Пользователь frm = new Пользователь();
                     frm.Show();
                     this.Hide();
                 }
@@ -67,7 +67,7 @@ namespace Фгещк
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 frm = new Form4();
+            Регистрация frm = new Регистрация();
             FORMA = this;
             this.Hide();
             frm.Show();
@@ -76,6 +76,11 @@ namespace Фгещк
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Вход_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

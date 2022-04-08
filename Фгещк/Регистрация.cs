@@ -11,9 +11,9 @@ using Фгещк.Users;
 
 namespace Фгещк
 {
-    public partial class Form4 : Form
+    public partial class Регистрация : Form
     {
-        public Form4()
+        public Регистрация()
         {
             InitializeComponent();
         }
@@ -28,6 +28,11 @@ namespace Фгещк
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox5.Text == "")
             {
                 MessageBox.Show("Нужно задать все данные");
+                return;
+            }
+            if (textBox2.TextLength < 8)
+            {
+                MessageBox.Show("пароль не может быть менее 8 символов");
                 return;
             }
             if (textBox2.Text != textBox3.Text)
@@ -57,7 +62,7 @@ namespace Фгещк
                 return;
             }
             MessageBox.Show($"Пользователь {usr.Login} зарегистрирован");
-            Form1.FORMA.Show();
+            Вход.FORMA.Show();
             this.Close();
             return;
         }
@@ -70,7 +75,12 @@ namespace Фгещк
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Вход.FORMA.Show();
+        }
+
+        private void Регистрация_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

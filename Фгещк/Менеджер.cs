@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Фгещк
 {
-    public partial class Form3 : Form
+    public partial class Менеджер : Form
     {
-        public Form3()
+        public Менеджер()
         {
             InitializeComponent();
         }
@@ -24,18 +24,23 @@ namespace Фгещк
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            label1.Text = "Добрый день, " + Form1.USER.Name;
+            label1.Text = "Добрый день, " + Вход.USER.Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Вход.FORMA.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Менеджер_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -10,22 +10,27 @@ using System.Windows.Forms;
 
 namespace Фгещк
 {
-    public partial class Form2 : Form
+    public partial class Директор : Form
     {
-        public Form2()
+        public Директор()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label1.Text = "Добрый день," + Form1.USER.Name;
+            label1.Text = "Добрый день, " + Вход.USER.Name;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Вход.FORMA.Show();
+        }
+
+        private void Директор_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

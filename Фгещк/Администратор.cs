@@ -11,9 +11,9 @@ using Фгещк.Users;
 
 namespace Фгещк
 {
-    public partial class Form5 : Form
+    public partial class Администратор : Form
     {
-        public Form5()
+        public Администратор()
         {
             InitializeComponent();
         }
@@ -39,7 +39,27 @@ namespace Фгещк
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Вход.FORMA.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            User usr = db.Users.Find(textBox1.Text);
+            usr = db.Users.Remove(usr);
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("Пользователь удален");
+        }
+
+        private void Администратор_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Фгещк
 {
-    public partial class Form6 : Form
+    public partial class Пользователь : Form
     {
-        public Form6()
+        public Пользователь()
         {
             InitializeComponent();
         }
@@ -20,12 +20,12 @@ namespace Фгещк
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Вход.FORMA.Show();
         }
 
         private void Form6_Load(object sender, EventArgs e)
         {
-            label1.Text = "Добрый день," + Form1.USER.Name;
+            label1.Text = "Добрый день, " + Вход.USER.Name;
         }
     }
 }
