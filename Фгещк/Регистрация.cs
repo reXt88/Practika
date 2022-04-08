@@ -64,7 +64,7 @@ namespace Фгещк
                 return;
             }
             MessageBox.Show($"Пользователь {usr.Login} зарегистрирован");
-            Вход.FORMA.Show();
+            Вход.FORMA.MyShow();
             this.Close();
             return;
         }
@@ -78,7 +78,7 @@ namespace Фгещк
         {
             appclose = true;
             this.Close();
-            Вход.FORMA.Show();
+            Вход.FORMA.MyShow();
         }
 
         private void Регистрация_FormClosing(object sender, FormClosingEventArgs e)

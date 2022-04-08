@@ -34,14 +34,14 @@ namespace Фгещк
                 MessageBox.Show(ex.Message);
                 return;
             }
-            MessageBox.Show($"Роль изменена");
+            MessageBox.Show("Роль изменена");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             appclose = true;
             this.Close();
-            Вход.FORMA.Show();
+            Вход.FORMA.MyShow();
         }
 
         private void button3_Click(object sender, EventArgs e)

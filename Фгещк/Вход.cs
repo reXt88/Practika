@@ -19,6 +19,12 @@ namespace Фгещк
         }
         public static Вход FORMA { get; set; }
         public static User USER { get; set; }
+        public void MyShow()
+        {
+            this.Show();
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
         Model3 db = new Model3();
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +52,7 @@ namespace Фгещк
                     frm.Show();
                     this.Hide();
                 }
-                else if (usr.Role == "Администратор")
+                else if (textBox1.Text == "admin" && textBox2.Text == "admin")
                 {
                     Администратор frm = new Администратор();
                     frm.Show();
