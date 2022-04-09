@@ -16,7 +16,7 @@ namespace Фгещк
         public void MyShow()
         {
             this.Show();
-            label3.Text = Смена_пароля.USER.Psw;
+            label3.Text = Entry.USER.Psw;
         }
         public Form owner;
         public static Учетная_запись FORMA { get; set; }
@@ -33,6 +33,7 @@ namespace Фгещк
         {
             Model3 db = new Model3();
             User usr = Entry.USER;
+            Entry change = new Entry();
             FORMA = this;
             label1.Text = usr.Name;
             label2.Text = usr.Role;

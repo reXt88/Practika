@@ -14,7 +14,6 @@ namespace Фгещк
     public partial class Смена_пароля : Form
     {
         Model3 db = new Model3();
-        public static User USER { get; set; }
         public Смена_пароля()
         {
             InitializeComponent();
@@ -28,8 +27,8 @@ namespace Фгещк
         {
             Model3 db = new Model3();
             User usr = db.Users.Find(Entry.USER.Login);
-            USER = usr;
             usr.Psw = textBox1.Text;
+            Entry.USER = usr;
             try
             {
                 db.SaveChanges();
@@ -41,6 +40,7 @@ namespace Фгещк
             }
             MessageBox.Show("Пароль успешно изменен");
             this.Close();
+            Entry change = new Entry();
             Учетная_запись.FORMA.Invalidate();
             Учетная_запись.FORMA.MyShow();
         }
