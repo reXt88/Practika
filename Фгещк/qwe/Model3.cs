@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Фгещк.Users
+namespace Фгещк.qwe
 {
     public partial class Model3 : DbContext
     {
@@ -12,6 +12,7 @@ namespace Фгещк.Users
         {
         }
 
+        public virtual DbSet<Clients> Clients { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -37,11 +37,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sampleDataSet = new Фгещк.SampleDataSet();
-            this.usersTableAdapter = new Фгещк.SampleDataSetTableAdapters.UsersTableAdapter();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -129,16 +126,8 @@
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.sampleDataSet;
-            // 
-            // sampleDataSet
-            // 
-            this.sampleDataSet.DataSetName = "SampleDataSet";
-            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+
+            //
             // 
             // comboBox2
             // 
@@ -175,7 +164,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Администратор_FormClosing);
             this.Load += new System.EventHandler(this.Administrator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,9 +177,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private SampleDataSet sampleDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private SampleDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.ComboBox comboBox2;
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Фгещк.Users;
+using Фгещк.qwe;
 
 namespace Фгещк
 {
@@ -69,8 +69,6 @@ namespace Фгещк
 
         private void Administrator_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sampleDataSet.Users". При необходимости она может быть перемещена или удалена.
-            this.usersTableAdapter.Fill(this.sampleDataSet.Users);
 
         }
     }

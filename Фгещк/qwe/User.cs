@@ -1,4 +1,4 @@
-namespace Фгещк.Users
+namespace Фгещк.qwe
 {
     using System;
     using System.Collections.Generic;
@@ -12,15 +12,12 @@ namespace Фгещк.Users
         [StringLength(50)]
         public string Login { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string Psw { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string Role { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string Name { get; set; }
     }

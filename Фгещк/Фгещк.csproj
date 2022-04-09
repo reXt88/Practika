@@ -55,10 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrimerDataSet.Designer.cs">
+    <Compile Include="ClientsData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PrimerDataSet.xsd</DependentUpon>
+      <DependentUpon>ClientsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -110,8 +116,6 @@
     <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="qwe\Model3.cs" />
-    <Compile Include="qwe\Users.cs" />
     <Compile Include="Forms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +128,9 @@
     <Compile Include="Forms\UserAccount.Designer.cs">
       <DependentUpon>UserAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="SampleDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SampleDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="qwe\Clients.cs" />
+    <Compile Include="qwe\Model3.cs" />
+    <Compile Include="qwe\User.cs" />
     <EmbeddedResource Include="Forms\Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +152,9 @@
     <EmbeddedResource Include="Forms\DefaulUser.resx">
       <DependentUpon>DefaulUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -161,18 +166,18 @@
     <EmbeddedResource Include="Forms\UserAccount.resx">
       <DependentUpon>UserAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="PrimerDataSet.xsc">
-      <DependentUpon>PrimerDataSet.xsd</DependentUpon>
+    <None Include="ClientsData.xsc">
+      <DependentUpon>ClientsData.xsd</DependentUpon>
     </None>
-    <None Include="PrimerDataSet.xsd">
+    <None Include="ClientsData.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PrimerDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ClientsData.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PrimerDataSet.xss">
-      <DependentUpon>PrimerDataSet.xsd</DependentUpon>
+    <None Include="ClientsData.xss">
+      <DependentUpon>ClientsData.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,17 +187,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SampleDataSet.xsc">
-      <DependentUpon>SampleDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SampleDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SampleDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SampleDataSet.xss">
-      <DependentUpon>SampleDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
