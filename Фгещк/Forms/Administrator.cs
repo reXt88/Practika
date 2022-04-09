@@ -21,9 +21,9 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User usr = db.Users.Find(textBox1.Text);
-            usr.Role = textBox3.Text;
-            
+            User usr = db.Users.Find(comboBox1.Text);
+            usr.Role = comboBox2.Text;
+            Entry.USER = usr;
             try
             {
                 db.SaveChanges();
@@ -44,7 +44,7 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
-            User usr = db.Users.Find(textBox1.Text);
+            User usr = db.Users.Find(comboBox1.Text);
             usr = db.Users.Remove(usr);
             try
             {
@@ -65,6 +65,13 @@ namespace Фгещк
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Administrator_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sampleDataSet.Users". При необходимости она может быть перемещена или удалена.
+            this.usersTableAdapter.Fill(this.sampleDataSet.Users);
+
         }
     }
 }

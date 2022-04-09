@@ -49,8 +49,8 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cllients frm = new Cllients();
-            frm.Show();
+            //Cllients frm = new Cllients();
+            //frm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
