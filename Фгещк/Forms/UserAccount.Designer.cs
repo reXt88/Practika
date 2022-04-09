@@ -166,6 +166,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Учетная_запись";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Учетная_запись";
             this.Load += new System.EventHandler(this.Учетная_запись_Load);
             this.ResumeLayout(false);

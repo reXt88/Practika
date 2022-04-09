@@ -18,7 +18,6 @@ namespace Фгещк
             this.Show();
             label3.Text = Entry.USER.Psw;
         }
-        public Form owner;
         public static Учетная_запись FORMA { get; set; }
         public Учетная_запись()
         {
@@ -48,7 +47,24 @@ namespace Фгещк
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            owner.Show();
+            if (Entry.USER.Role == "Менеджер")
+            {
+                Manager frm = new Manager();
+                frm.Show();
+                this.Close();
+            }
+            else if (Entry.USER.Role == "Директор")
+            {
+                Director frm = new Director();
+                frm.Show();
+                this.Close();
+            }
+            else if (Entry.USER.Role == "Пользователь")
+            {
+                DefaulUser frm = new DefaulUser();
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

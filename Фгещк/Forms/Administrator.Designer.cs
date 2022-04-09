@@ -159,6 +159,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Администратор_FormClosing);
             this.Load += new System.EventHandler(this.Administrator_Load);

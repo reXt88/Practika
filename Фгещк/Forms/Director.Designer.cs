@@ -107,6 +107,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Director";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Информационная система - форма директора";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Директор_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);

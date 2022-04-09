@@ -16,26 +16,22 @@ namespace Фгещк
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //public void MyShow()
+        //{
+        //    comboBox1.Text = Entry.USER.Login;
+        //    this.Show();
+        //}
+        public static Manager FORMA { get; set; }
         private void Form3_Load(object sender, EventArgs e)
         {
-            
+            FORMA = this;
+            comboBox1.Text = Entry.USER.Login;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
             Entry.FORMA.MyShow();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Менеджер_FormClosing(object sender, FormClosingEventArgs e)
@@ -49,17 +45,33 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cllients frm = new Cllients();
-            frm.Show();
-            this.Hide();
+            //Cllients frm = new Cllients();
+            //frm.Show();
+            //this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Учетная_запись frm = new Учетная_запись();
-            frm.Show();
-            frm.owner = this;
-            this.Hide();
+            //Учетная_запись frm = new Учетная_запись();
+            //frm.Show();
+            //frm.owner = this;
+            //this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Учетная запись")
+            {
+                Учетная_запись frm = new Учетная_запись();
+                frm.Show();
+                this.Hide();
+            }
+            else if (comboBox1.Text == "Клиенты")
+            {
+                Cllients frm = new Cllients();
+                frm.Show();
+                this.Hide();
+            }
         }
     }
 }

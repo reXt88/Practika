@@ -136,6 +136,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Entry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Информационная система";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Вход_FormClosing);
             this.Load += new System.EventHandler(this.Вход_Load);

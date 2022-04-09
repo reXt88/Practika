@@ -155,7 +155,7 @@
             this.maskedTextBox1.Mask = "000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 19);
-            this.maskedTextBox1.TabIndex = 18;
+            this.maskedTextBox1.TabIndex = 11;
             // 
             // maskedTextBox2
             // 
@@ -164,7 +164,7 @@
             this.maskedTextBox2.Mask = "+0(000)000-00-00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox2.TabIndex = 19;
+            this.maskedTextBox2.TabIndex = 10;
             // 
             // UserAdd
             // 
@@ -188,6 +188,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserAdd";
             this.ResumeLayout(false);
             this.PerformLayout();
