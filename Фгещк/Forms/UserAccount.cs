@@ -33,7 +33,6 @@ namespace Фгещк
         {
             Model3 db = new Model3();
             User usr = Entry.USER;
-            Entry change = new Entry();
             FORMA = this;
             label1.Text = usr.Name;
             label2.Text = usr.Role;

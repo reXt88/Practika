@@ -156,7 +156,6 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 19);
             this.maskedTextBox1.TabIndex = 18;
-            this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // maskedTextBox2
             // 

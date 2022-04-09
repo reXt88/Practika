@@ -48,6 +48,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(748, 12);
             this.button4.Name = "button4";
@@ -68,7 +69,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Пользователь
+            // DefaulUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +81,7 @@
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Пользователь";
+            this.Name = "DefaulUser";
             this.Text = "Информационная система - форма пользователя";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Пользователь_FormClosing);
             this.Load += new System.EventHandler(this.Form6_Load);

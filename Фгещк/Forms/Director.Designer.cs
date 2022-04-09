@@ -71,6 +71,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(748, 12);
             this.button4.Name = "button4";
