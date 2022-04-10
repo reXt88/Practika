@@ -38,7 +38,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.sampleDataSet = new Фгещк.SampleDataSet();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new Фгещк.SampleDataSetTableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -114,7 +119,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.usersBindingSource;
+            this.comboBox1.DataSource = this.usersBindingSource1;
             this.comboBox1.DisplayMember = "Login";
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -141,6 +146,20 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 1;
             // 
+            // sampleDataSet
+            // 
+            this.sampleDataSet.DataSetName = "SampleDataSet";
+            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.sampleDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // Administrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +183,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Администратор_FormClosing);
             this.Load += new System.EventHandler(this.Administrator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +200,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.ComboBox comboBox2;
+        private SampleDataSet sampleDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private SampleDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }

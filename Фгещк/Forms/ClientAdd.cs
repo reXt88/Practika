@@ -11,9 +11,9 @@ using Фгещк.qwe;
 
 namespace Фгещк.Forms
 {
-    public partial class UserAdd : Form
+    public partial class ClientAdd : Form
     {
-        public UserAdd()
+        public ClientAdd()
         {
             InitializeComponent();
         }

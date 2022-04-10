@@ -60,17 +60,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientsData.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserAdd.cs">
+    <Compile Include="Forms\ClientAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserAdd.Designer.cs">
-      <DependentUpon>UserAdd.cs</DependentUpon>
+    <Compile Include="Forms\ClientAdd.Designer.cs">
+      <DependentUpon>ClientAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientDel.Designer.cs">
+      <DependentUpon>ClientDel.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserDel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UserDel.Designer.cs">
       <DependentUpon>UserDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -137,6 +149,11 @@
     <Compile Include="qwe\Clients.cs" />
     <Compile Include="qwe\Model3.cs" />
     <Compile Include="qwe\User.cs" />
+    <Compile Include="SampleDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,11 +175,17 @@
     <EmbeddedResource Include="Forms\DefaulUser.resx">
       <DependentUpon>DefaulUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserAdd.resx">
-      <DependentUpon>UserAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ClientAdd.resx">
+      <DependentUpon>ClientAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientDel.resx">
+      <DependentUpon>ClientDel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserDel.resx">
       <DependentUpon>UserDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,6 +219,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SampleDataSet1.xsc">
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SampleDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SampleDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SampleDataSet1.xss">
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

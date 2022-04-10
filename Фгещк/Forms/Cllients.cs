@@ -23,7 +23,11 @@ namespace Фгещк
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "clientsData.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter1.Fill(this.clientsData.Clients);
-
+            if (Entry.USER.Role == "Директор")
+            {
+                button1.Visible = false;
+                button3.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,21 +37,31 @@ namespace Фгещк
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            UserAdd frm = new UserAdd();
+            ClientAdd frm = new ClientAdd();
             frm.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Manager frm = new Manager();
-            frm.Show();
-            this.Close();
+            User usr = Entry.USER;
+            if (usr.Role == "Менеджер")
+            {
+                Manager frm = new Manager();
+                frm.Show();
+                this.Close();
+            }
+            else if (usr.Role == "Директор")
+            {
+                Director frm = new Director();
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UserDel frm = new UserDel();
+            ClientDel frm = new ClientDel();
             frm.Show();
             this.Close();
         }

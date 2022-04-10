@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Фгещк.Forms;
 
 namespace Фгещк
 {
@@ -20,7 +21,28 @@ namespace Фгещк
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            comboBox1.Text = Entry.USER.Login;
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Учетная запись")
+            {
+                Учетная_запись frm = new Учетная_запись();
+                frm.Show();
+                this.Hide();
+            }
+            else if (comboBox1.Text == "Клиенты")
+            {
+                Cllients frm = new Cllients();
+                frm.Show();
+                this.Hide();
+            }
+            else if (comboBox1.Text == "Сотрудники")
+            {
+                Users frm = new Users();
+                frm.Show();
+                this.Hide();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

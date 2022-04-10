@@ -44,17 +44,20 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
-            User usr = db.Users.Find(comboBox1.Text);
-            usr = db.Users.Remove(usr);
-            try
+            if (comboBox1.Text == "")
             {
-                db.SaveChanges();
+                User usr = db.Users.Find(comboBox1.Text);
+                usr = db.Users.Remove(usr);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                MessageBox.Show("Пользователь удален");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            MessageBox.Show("Пользователь удален");
         }
 
         private void Администратор_FormClosing(object sender, FormClosingEventArgs e)
@@ -69,7 +72,9 @@ namespace Фгещк
 
         private void Administrator_Load(object sender, EventArgs e)
         {
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sampleDataSet.Users". При необходимости она может быть перемещена или удалена.
+            this.usersTableAdapter.Fill(this.sampleDataSet.Users);
+            comboBox1.Text = "";
         }
     }
 }

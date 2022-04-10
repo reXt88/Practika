@@ -1,6 +1,6 @@
 ﻿namespace Фгещк.Forms
 {
-    partial class UserAdd
+    partial class ClientAdd
     {
         /// <summary>
         /// Required designer variable.
