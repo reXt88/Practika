@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Фгещк.Forms;
 
 namespace Фгещк
 {
@@ -16,11 +17,6 @@ namespace Фгещк
         {
             InitializeComponent();
         }
-        //public void MyShow()
-        //{
-        //    comboBox1.Text = Entry.USER.Login;
-        //    this.Show();
-        //}
         public static Manager FORMA { get; set; }
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -45,17 +41,12 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Cllients frm = new Cllients();
-            //frm.Show();
-            //this.Hide();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //Учетная_запись frm = new Учетная_запись();
-            //frm.Show();
-            //frm.owner = this;
-            //this.Hide();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +63,11 @@ namespace Фгещк
                 frm.Show();
                 this.Hide();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
