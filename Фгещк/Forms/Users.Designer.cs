@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pswDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sampleDataSet = new Фгещк.SampleDataSet();
             this.usersTableAdapter = new Фгещк.SampleDataSetTableAdapters.UsersTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pswDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
@@ -63,6 +63,39 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(785, 364);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loginDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // pswDataGridViewTextBoxColumn
+            // 
+            this.pswDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pswDataGridViewTextBoxColumn.DataPropertyName = "Psw";
+            this.pswDataGridViewTextBoxColumn.HeaderText = "Psw";
+            this.pswDataGridViewTextBoxColumn.Name = "pswDataGridViewTextBoxColumn";
+            this.pswDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usersBindingSource
             // 
@@ -97,39 +130,6 @@
             this.button1.Text = "Увольнение";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
-            this.loginDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // pswDataGridViewTextBoxColumn
-            // 
-            this.pswDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pswDataGridViewTextBoxColumn.DataPropertyName = "Psw";
-            this.pswDataGridViewTextBoxColumn.HeaderText = "Psw";
-            this.pswDataGridViewTextBoxColumn.Name = "pswDataGridViewTextBoxColumn";
-            this.pswDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Users
             // 

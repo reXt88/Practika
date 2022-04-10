@@ -21,7 +21,7 @@ namespace Фгещк
         private void Form3_Load(object sender, EventArgs e)
         {
             FORMA = this;
-            comboBox1.Text = Entry.USER.Login;
+            button2.Text = Entry.USER.Login;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,6 +71,11 @@ namespace Фгещк
         }
 
         private void comboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             comboBox1.DroppedDown = true;
         }

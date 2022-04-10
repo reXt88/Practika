@@ -13,7 +13,6 @@ namespace Фгещк
 {
     public partial class Director : Form
     {
-        static bool appclose = false;
         public Director()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace Фгещк
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            comboBox1.Text = Entry.USER.Login;
+            button2.Text = Entry.USER.Login;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -47,15 +46,13 @@ namespace Фгещк
 
         private void button3_Click(object sender, EventArgs e)
         {
-            appclose = true;
             this.Close();
             Entry.FORMA.MyShow();
         }
 
         private void Директор_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (appclose = false)
-            Application.Exit();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -71,6 +68,11 @@ namespace Фгещк
         }
 
         private void comboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             comboBox1.DroppedDown = true;
         }
