@@ -36,14 +36,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataSet = new Фгещк.SampleDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.sampleDataSet = new Фгещк.SampleDataSet();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Фгещк.SampleDataSetTableAdapters.UsersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -128,6 +128,17 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.sampleDataSet;
+            // 
+            // sampleDataSet
+            // 
+            this.sampleDataSet.DataSetName = "SampleDataSet";
+            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersBindingSource
             // 
@@ -145,16 +156,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 1;
-            // 
-            // sampleDataSet
-            // 
-            this.sampleDataSet.DataSetName = "SampleDataSet";
-            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.sampleDataSet;
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // usersTableAdapter
             // 
@@ -182,9 +184,9 @@
             this.Text = "Form5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Администратор_FormClosing);
             this.Load += new System.EventHandler(this.Administrator_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

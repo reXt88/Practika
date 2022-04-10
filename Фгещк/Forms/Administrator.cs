@@ -76,5 +76,15 @@ namespace Фгещк
             this.usersTableAdapter.Fill(this.sampleDataSet.Users);
             comboBox1.Text = "";
         }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.DroppedDown = true;
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            comboBox2.DroppedDown = true;
+        }
     }
 }

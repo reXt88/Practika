@@ -33,15 +33,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataSet = new Фгещк.SampleDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.sampleDataSet = new Фгещк.SampleDataSet();
-            this.sampleDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Фгещк.SampleDataSetTableAdapters.UsersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -92,6 +92,22 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 20;
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.sampleDataSetBindingSource;
+            // 
+            // sampleDataSetBindingSource
+            // 
+            this.sampleDataSetBindingSource.DataSource = this.sampleDataSet;
+            this.sampleDataSetBindingSource.Position = 0;
+            // 
+            // sampleDataSet
+            // 
+            this.sampleDataSet.DataSetName = "SampleDataSet";
+            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -112,21 +128,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 24;
-            // 
-            // sampleDataSet
-            // 
-            this.sampleDataSet.DataSetName = "SampleDataSet";
-            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sampleDataSetBindingSource
-            // 
-            this.sampleDataSetBindingSource.DataSource = this.sampleDataSet;
-            this.sampleDataSetBindingSource.Position = 0;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.sampleDataSetBindingSource;
             // 
             // usersTableAdapter
             // 
@@ -151,9 +152,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDel";
             this.Load += new System.EventHandler(this.UserDel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

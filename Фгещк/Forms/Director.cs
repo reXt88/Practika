@@ -69,5 +69,10 @@ namespace Фгещк
             frm.Show();
             this.Hide();
         }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.DroppedDown = true;
+        }
     }
 }

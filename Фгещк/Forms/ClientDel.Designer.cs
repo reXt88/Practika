@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.clientsData = new Фгещк.ClientsData();
-            this.clientsDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsDataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientsDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientsData = new Фгещк.ClientsData();
+            this.clientsDataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new Фгещк.ClientsDataTableAdapters.ClientsTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -59,26 +59,27 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
-            // clientsData
+            // clientsBindingSource
             // 
-            this.clientsData.DataSetName = "ClientsData";
-            this.clientsData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.clientsBindingSource.DataMember = "Clients";
+            this.clientsBindingSource.DataSource = this.clientsDataBindingSource;
             // 
             // clientsDataBindingSource
             // 
             this.clientsDataBindingSource.DataSource = this.clientsData;
             this.clientsDataBindingSource.Position = 0;
             // 
+            // clientsData
+            // 
+            this.clientsData.DataSetName = "ClientsData";
+            this.clientsData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // clientsDataBindingSource1
             // 
             this.clientsDataBindingSource1.DataSource = this.clientsData;
             this.clientsDataBindingSource1.Position = 0;
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "Clients";
-            this.clientsBindingSource.DataSource = this.clientsDataBindingSource;
             // 
             // clientsTableAdapter
             // 
@@ -139,7 +140,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // UserDel
+            // ClientDel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,15 +155,15 @@
             this.Controls.Add(this.comboBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UserDel";
+            this.Name = "ClientDel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDel";
             this.Load += new System.EventHandler(this.UserDel_Load);
             this.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.clientsData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -62,5 +62,10 @@ namespace Фгещк.Forms
             Users frm = new Users();
             frm.Show();
         }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.DroppedDown = true;
+        }
     }
 }
