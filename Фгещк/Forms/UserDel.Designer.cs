@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.sampleDataSet = new Фгещк.SampleDataSet();
+            this.sampleDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new Фгещк.SampleDataSetTableAdapters.UsersTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -46,6 +54,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -57,6 +66,7 @@
             this.button1.TabIndex = 22;
             this.button1.Text = "Удалить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -72,7 +82,8 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.comboBox1.DisplayMember = "ID";
+            this.comboBox1.DataSource = this.usersBindingSource;
+            this.comboBox1.DisplayMember = "Login";
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
@@ -80,6 +91,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 20;
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -101,6 +113,25 @@
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 24;
             // 
+            // sampleDataSet
+            // 
+            this.sampleDataSet.DataSetName = "SampleDataSet";
+            this.sampleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sampleDataSetBindingSource
+            // 
+            this.sampleDataSetBindingSource.DataSource = this.sampleDataSet;
+            this.sampleDataSetBindingSource.Position = 0;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.sampleDataSetBindingSource;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // UserDel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,7 +148,12 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserDel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDel";
+            this.Load += new System.EventHandler(this.UserDel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,5 +167,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource sampleDataSetBindingSource;
+        private SampleDataSet sampleDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private SampleDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }

@@ -30,5 +30,12 @@ namespace Фгещк.Forms
             Director frm = new Director();
             frm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserDel frm = new UserDel();
+            frm.Show();
+            this.Close();
+        }
     }
 }
