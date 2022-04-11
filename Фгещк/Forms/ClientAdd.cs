@@ -22,6 +22,11 @@ namespace Фгещк.Forms
         {
             Model3 db = new Model3();
             Clients cl = new Clients();
+            User usr = new User();
+            usr.Login = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+            usr.Name = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+            usr.Psw = "00000000";
+            usr.Role = "Пользователь";
             cl.Фамилия = textBox1.Text;
             cl.Имя = textBox2.Text;
             cl.Отчество = textBox3.Text;
@@ -29,6 +34,7 @@ namespace Фгещк.Forms
             cl.Возраст = Convert.ToInt32(maskedTextBox1.Text);
             Cllients.CLIENT = cl;
             db.Clients.Add(cl);
+            db.Users.Add(usr);
             try
             {
                 db.SaveChanges();

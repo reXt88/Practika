@@ -49,7 +49,7 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.Location = new System.Drawing.Point(216, 184);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 19);
+            this.textBox3.Size = new System.Drawing.Size(149, 19);
             this.textBox3.TabIndex = 9;
             // 
             // textBox2
@@ -59,7 +59,7 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(216, 152);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 19);
+            this.textBox2.Size = new System.Drawing.Size(149, 19);
             this.textBox2.TabIndex = 7;
             // 
             // textBox1
@@ -69,7 +69,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(216, 116);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.Size = new System.Drawing.Size(149, 19);
             this.textBox1.TabIndex = 6;
             // 
             // label4
@@ -125,10 +125,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(160, 290);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(183, 291);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 16;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
@@ -154,7 +154,7 @@
             this.maskedTextBox1.Location = new System.Drawing.Point(216, 251);
             this.maskedTextBox1.Mask = "000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 19);
+            this.maskedTextBox1.Size = new System.Drawing.Size(149, 19);
             this.maskedTextBox1.TabIndex = 11;
             // 
             // maskedTextBox2
@@ -163,10 +163,10 @@
             this.maskedTextBox2.Location = new System.Drawing.Point(216, 213);
             this.maskedTextBox2.Mask = "+0(000)000-00-00";
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox2.Size = new System.Drawing.Size(149, 26);
             this.maskedTextBox2.TabIndex = 10;
             // 
-            // UserAdd
+            // ClientAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +187,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UserAdd";
+            this.Name = "ClientAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserAdd";
             this.ResumeLayout(false);

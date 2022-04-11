@@ -19,7 +19,7 @@ namespace Фгещк
             InitializeComponent();
         }
         Model3 db = new Model3();
-         private void Form4_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
 
         }
@@ -91,6 +91,20 @@ namespace Фгещк
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == (char)Keys.Back)
+                {
+
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

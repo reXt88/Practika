@@ -97,9 +97,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(404, 334);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(400, 334);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 55);
+            this.button2.Size = new System.Drawing.Size(179, 55);
             this.button2.TabIndex = 6;
             this.button2.Text = "Выход";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,9 +109,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(223, 334);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(219, 334);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 55);
+            this.button1.Size = new System.Drawing.Size(179, 55);
             this.button1.TabIndex = 5;
             this.button1.Text = "Зарегистрироваться";
             this.button1.UseVisualStyleBackColor = false;
@@ -121,10 +123,12 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox1.Location = new System.Drawing.Point(203, 109);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(329, 19);
             this.textBox1.TabIndex = 0;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 

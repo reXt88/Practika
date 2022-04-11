@@ -36,7 +36,7 @@ namespace Фгещк
                 frm.Show();
                 this.Hide();
             }
-            else if (comboBox1.Text == "Сотрудники")
+            else if (comboBox1.Text == "Пользователи")
             {
                 Users frm = new Users();
                 frm.Show();

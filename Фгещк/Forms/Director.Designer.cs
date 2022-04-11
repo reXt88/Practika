@@ -38,6 +38,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(330, 383);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 55);
@@ -68,7 +69,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Учетная запись",
-            "Сотрудники",
+            "Пользователи",
             "Клиенты"});
             this.comboBox1.Location = new System.Drawing.Point(609, 98);
             this.comboBox1.Name = "comboBox1";

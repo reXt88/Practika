@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientsData.cs">
+      <DependentUpon>ClientsData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClientsData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,6 +152,9 @@
     <Compile Include="qwe\Clients.cs" />
     <Compile Include="qwe\Model3.cs" />
     <Compile Include="qwe\User.cs" />
+    <Compile Include="SampleDataSet1.cs">
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SampleDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

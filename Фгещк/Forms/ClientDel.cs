@@ -40,7 +40,10 @@ namespace Фгещк.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             Model3 db = new Model3();
+            User usr = db.Users.Find(label1.Text);
+            label1.Text = Cllients.CLIENT.Фамилия + " " + Cllients.CLIENT.Имя + " " + Cllients.CLIENT.Отчество;
             Clients cl = db.Clients.Find(Convert.ToInt32(comboBox1.Text));
+            usr = db.Users.Remove(usr);
             cl = db.Clients.Remove(cl);
             try
             {
