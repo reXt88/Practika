@@ -75,6 +75,18 @@
     <Compile Include="Forms\ClientDel.Designer.cs">
       <DependentUpon>ClientDel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Korzina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Korzina.Designer.cs">
+      <DependentUpon>Korzina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserDel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,11 @@
     </Compile>
     <Compile Include="Forms\Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -169,8 +186,14 @@
     <EmbeddedResource Include="Forms\Cllients.resx">
       <DependentUpon>Cllients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Korzina.resx">
+      <DependentUpon>Korzina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
@@ -216,6 +239,17 @@
       <DependentUpon>ClientsData.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="ProdDataSet1.xsc">
+      <DependentUpon>ProdDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProdDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProdDataSet1.xss">
+      <DependentUpon>ProdDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

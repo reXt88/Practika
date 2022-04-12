@@ -17,8 +17,8 @@ namespace Фгещк
         {
             InitializeComponent();
         }
-        public static bool isChanged { get; set; } = false;
         public static Entry FORMA { get; set; }
+        public static string KORZ { get; set; }
         public static User USER { get; set; }
         public void MyShow()
         {

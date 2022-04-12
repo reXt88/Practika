@@ -13,7 +13,6 @@ namespace Фгещк
 {
     public partial class Registration : Form
     {
-        static bool appclose = false;
         public Registration()
         {
             InitializeComponent();
@@ -26,8 +25,7 @@ namespace Фгещк
 
         private void button1_Click(object sender, EventArgs e)
         {
-            appclose = true;
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox5.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox5.Text == "" || maskedTextBox1.Text == "" || maskedTextBox2.Text == "")
             {
                 MessageBox.Show("Нужно задать все данные");
                 return;
@@ -53,6 +51,15 @@ namespace Фгещк
             usr.Psw = textBox2.Text;
             usr.Role = "Пользователь";
             usr.Name = textBox5.Text;
+            Clients cl = new Clients();
+            string [] mas = new string [3];
+            mas = textBox5.Text.Split(' ');
+            cl.Фамилия = mas[0];
+            cl.Имя = mas[1];
+            cl.Отчество = mas[2];
+            cl.Номер_телефона = maskedTextBox1.Text;
+            cl.Возраст = Convert.ToInt32(maskedTextBox2.Text);
+            db.Clients.Add(cl);
             db.Users.Add(usr);
             try
             {
@@ -76,15 +83,14 @@ namespace Фгещк
 
         private void button2_Click(object sender, EventArgs e)
         {
-            appclose = true;
             this.Close();
             Entry.FORMA.MyShow();
         }
 
         private void Регистрация_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!appclose)
-                Application.Exit();
+            //if (!appclose)
+            //    Application.Exit();
 
         }
 

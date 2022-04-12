@@ -30,7 +30,6 @@ namespace Фгещк.Forms
             {
                 Model3 db = new Model3();
                 User usr = db.Users.Find(comboBox1.Text);
-                Entry.USER = usr;
                 label2.Text = "Имя";
                 label3.Text = usr.Name;
             }
@@ -40,20 +39,27 @@ namespace Фгещк.Forms
         {
             Model3 db = new Model3();
             User usr = db.Users.Find(comboBox1.Text);
-            usr = db.Users.Remove(usr);
-            try
+            if (usr.Role != "Пользователь" && comboBox1.Text != Entry.USER.Login)
             {
-                db.SaveChanges();
+                usr = db.Users.Remove(usr);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+                MessageBox.Show("Сотрудник уволен");
+                this.Close();
+                Users frm = new Users();
+                frm.Show();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-            MessageBox.Show("Сотрудник уволен");
-            this.Close();
-            Users frm = new Users();
-            frm.Show();
+            else if (comboBox1.Text == Entry.USER.Login)
+                MessageBox.Show("Вы не можете уволить себя");
+            else
+                MessageBox.Show("Вы не можете уволить пользователя");
         }
 
         private void button2_Click(object sender, EventArgs e)

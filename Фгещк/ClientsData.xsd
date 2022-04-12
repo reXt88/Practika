@@ -42,7 +42,7 @@ SELECT ID, Фамилия, Имя, Отчество, [Номер телефон�
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ID, Фамилия, Имя, Отчество, [Номер телефона], Возраст FROM dbo.Clients</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -92,39 +92,39 @@ SELECT ID, Фамилия, Имя, Отчество, [Номер телефон�
   <xs:element name="ClientsData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ClientsData" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ClientsData">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Clients" msprop:Generator_RowClassName="ClientsRow" msprop:Generator_RowEvHandlerName="ClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientsRowDeleted" msprop:Generator_RowDeletingName="ClientsRowDeleting" msprop:Generator_RowEvArgName="ClientsRowChangeEvent" msprop:Generator_TablePropName="Clients" msprop:Generator_RowChangedName="ClientsRowChanged" msprop:Generator_UserTableName="Clients" msprop:Generator_RowChangingName="ClientsRowChanging" msprop:Generator_TableClassName="ClientsDataTable" msprop:Generator_TableVarName="tableClients">
+        <xs:element name="Clients" msprop:Generator_RowEvHandlerName="ClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientsRowDeleted" msprop:Generator_RowDeletingName="ClientsRowDeleting" msprop:Generator_RowEvArgName="ClientsRowChangeEvent" msprop:Generator_TablePropName="Clients" msprop:Generator_RowChangedName="ClientsRowChanged" msprop:Generator_UserTableName="Clients" msprop:Generator_RowChangingName="ClientsRowChanging" msprop:Generator_RowClassName="ClientsRow" msprop:Generator_TableClassName="ClientsDataTable" msprop:Generator_TableVarName="tableClients">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
-              <xs:element name="Фамилия" msprop:Generator_UserColumnName="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_ColumnVarNameInTable="columnФамилия" minOccurs="0">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_UserColumnName="Фамилия" msprop:Generator_ColumnVarNameInTable="columnФамилия" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Имя" msprop:Generator_UserColumnName="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnVarNameInTable="columnИмя" minOccurs="0">
+              <xs:element name="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_UserColumnName="Имя" msprop:Generator_ColumnVarNameInTable="columnИмя" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Отчество" msprop:Generator_UserColumnName="Отчество" msprop:Generator_ColumnPropNameInTable="ОтчествоColumn" msprop:Generator_ColumnPropNameInRow="Отчество" msprop:Generator_ColumnVarNameInTable="columnОтчество" minOccurs="0">
+              <xs:element name="Отчество" msprop:Generator_ColumnPropNameInTable="ОтчествоColumn" msprop:Generator_ColumnPropNameInRow="Отчество" msprop:Generator_UserColumnName="Отчество" msprop:Generator_ColumnVarNameInTable="columnОтчество" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Номер_x0020_телефона" msprop:Generator_UserColumnName="Номер телефона" msprop:Generator_ColumnPropNameInTable="Номер_телефонаColumn" msprop:Generator_ColumnPropNameInRow="Номер_телефона" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона" minOccurs="0">
+              <xs:element name="Номер_x0020_телефона" msprop:Generator_ColumnPropNameInTable="Номер_телефонаColumn" msprop:Generator_ColumnPropNameInRow="Номер_телефона" msprop:Generator_UserColumnName="Номер телефона" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Возраст" msprop:Generator_UserColumnName="Возраст" msprop:Generator_ColumnPropNameInTable="ВозрастColumn" msprop:Generator_ColumnPropNameInRow="Возраст" msprop:Generator_ColumnVarNameInTable="columnВозраст" type="xs:int" minOccurs="0" />
+              <xs:element name="Возраст" msprop:Generator_ColumnPropNameInTable="ВозрастColumn" msprop:Generator_ColumnPropNameInRow="Возраст" msprop:Generator_UserColumnName="Возраст" msprop:Generator_ColumnVarNameInTable="columnВозраст" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

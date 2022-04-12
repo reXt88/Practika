@@ -7,45 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Фгещк.Forms;
 
-namespace Фгещк
+namespace Фгещк.Forms
 {
-    public partial class DefaulUser : Form
+    public partial class Korzina : Form
     {
-        public DefaulUser()
+        public Korzina()
         {
             InitializeComponent();
         }
-        public static DefaulUser FORMA { get; set; }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Entry.FORMA.MyShow();
-        }
-
-        private void Form6_Load(object sender, EventArgs e)
-        {
-            FORMA = this;
-            button2.Text = Entry.USER.Login;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Учетная_запись frm = new Учетная_запись();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void Пользователь_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
+            comboBox1.DroppedDown = true;
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
@@ -69,10 +44,11 @@ namespace Фгещк
                 this.Hide();
             }
         }
-        
-        private void button2_Click_1(object sender, EventArgs e)
+
+        private void Korzina_Load(object sender, EventArgs e)
         {
-            comboBox1.DroppedDown = true;
+            comboBox1.Text = Entry.USER.Login;
+            richTextBox1.Text = Entry.KORZ;
         }
     }
 }
