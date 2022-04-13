@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(51, 131);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(414, 260);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
             // 
             // button2
             // 
@@ -86,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(472, 335);
+            this.label1.Location = new System.Drawing.Point(664, 329);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 37;
@@ -95,10 +86,32 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(472, 359);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(664, 353);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 38;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(51, 131);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(414, 251);
+            this.listBox1.TabIndex = 39;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(471, 353);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Korzina
             // 
@@ -107,11 +120,12 @@
             this.BackgroundImage = global::Фгещк.Properties.Resources.abstrakciya_boke_uzory;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Korzina";
@@ -123,11 +137,11 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -8,11 +8,12 @@ namespace Фгещк.qwe
     public partial class Model3 : DbContext
     {
         public Model3()
-            : base("name=Model3")
+            : base("name=Model1")
         {
         }
 
         public virtual DbSet<Clients> Clients { get; set; }
+        public virtual DbSet<ProductNew> ProductNew { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

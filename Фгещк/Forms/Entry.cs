@@ -19,6 +19,8 @@ namespace Фгещк
         }
         public static Entry FORMA { get; set; }
         public static string KORZ { get; set; }
+        public static int SUM { get; set; }
+        public static string [] masKORZ   { get; set; }
         public static User USER { get; set; }
         public void MyShow()
         {
