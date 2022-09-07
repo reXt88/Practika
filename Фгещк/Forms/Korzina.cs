@@ -49,11 +49,15 @@ namespace Фгещк.Forms
         private void Korzina_Load(object sender, EventArgs e)
         {
             comboBox1.Text = Entry.USER.Login;
-            for (int i = 0; i < Entry.masKORZ.Length; i++)
+            if (Entry.masKORZ != null)
             {
-                listBox1.Items.Add(Entry.masKORZ[i].ToString());
+                for (int i = 0; i < Entry.masKORZ.Length; i++)
+                {
+                    listBox1.Items.Add(Entry.masKORZ[i].ToString());
+                }
+                textBox1.Text = Entry.SUM.ToString();
             }
-            textBox1.Text = Entry.SUM.ToString();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -63,11 +67,21 @@ namespace Фгещк.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Remove(listBox1.Text);
             Entry.KORZ = listBox1.Text;
             Model3 db = new Model3();
             ProductNew pr = db.ProductNew.ToList().Find(x => x.Название == listBox1.Text);
-            Entry.SUM = Entry.SUM - Convert.ToInt32(pr.Цена);
+            if (pr != null)
+            {
+                Entry.SUM = Convert.ToInt32(Entry.SUM) - Convert.ToInt32(pr.Цена);
+                textBox1.Text = Entry.SUM.ToString();
+                listBox1.Items.Remove(listBox1.Text);
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                {
+
+                }
+            }
+            else
+                MessageBox.Show("выберите предмет для удаления");
         }
     }
 }

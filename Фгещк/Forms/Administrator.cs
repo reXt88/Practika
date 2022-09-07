@@ -47,16 +47,21 @@ namespace Фгещк
             if (comboBox1.Text == "")
             {
                 User usr = db.Users.Find(comboBox1.Text);
-                usr = db.Users.Remove(usr);
-                try
+                if (comboBox1.Text != "")
                 {
-                    db.SaveChanges();
+                    usr = db.Users.Remove(usr);
+                    try
+                    {
+                        db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    MessageBox.Show("Пользователь удален");
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                MessageBox.Show("Пользователь удален");
+                else
+                    MessageBox.Show("Выберите пользователя");
             }
         }
 

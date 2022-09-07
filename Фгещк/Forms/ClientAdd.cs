@@ -23,11 +23,20 @@ namespace Фгещк.Forms
             Model3 db = new Model3();
             Clients cl = new Clients();
             User usr = new User();
-            usr.Login = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+            //usr.Login = textBox1.Text + "_" + textBox2.Text + "_" + textBox3.Text;
+            Random r = new Random();
+            string s = Convert.ToString(r.Next(1000000000));
+            while (db.Users.Find("User" + s) != null)
+            {
+                s = Convert.ToString(r.Next(10000000));
+            }
+
+            usr.Login = "User" + s;
             usr.Name = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
             usr.Psw = "00000000";
             usr.Role = "Пользователь";
             cl.Фамилия = textBox1.Text;
+            cl.Login = usr.Login;
             cl.Имя = textBox2.Text;
             cl.Отчество = textBox3.Text;
             cl.Номер_телефона = maskedTextBox2.Text;

@@ -11,6 +11,9 @@ namespace Фгещк.qwe
         public int ID { get; set; }
 
         [StringLength(50)]
+        public string Login { get; set; }
+
+        [StringLength(50)]
         public string Фамилия { get; set; }
 
         [StringLength(50)]

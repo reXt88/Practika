@@ -61,7 +61,7 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -82,36 +82,42 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // фамилияDataGridViewTextBoxColumn1
             // 
             this.фамилияDataGridViewTextBoxColumn1.DataPropertyName = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn1.Name = "фамилияDataGridViewTextBoxColumn1";
+            this.фамилияDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // имяDataGridViewTextBoxColumn1
             // 
             this.имяDataGridViewTextBoxColumn1.DataPropertyName = "Имя";
             this.имяDataGridViewTextBoxColumn1.HeaderText = "Имя";
             this.имяDataGridViewTextBoxColumn1.Name = "имяDataGridViewTextBoxColumn1";
+            this.имяDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // отчествоDataGridViewTextBoxColumn1
             // 
             this.отчествоDataGridViewTextBoxColumn1.DataPropertyName = "Отчество";
             this.отчествоDataGridViewTextBoxColumn1.HeaderText = "Отчество";
             this.отчествоDataGridViewTextBoxColumn1.Name = "отчествоDataGridViewTextBoxColumn1";
+            this.отчествоDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // номерТелефонаDataGridViewTextBoxColumn1
             // 
             this.номерТелефонаDataGridViewTextBoxColumn1.DataPropertyName = "Номер телефона";
             this.номерТелефонаDataGridViewTextBoxColumn1.HeaderText = "Номер телефона";
             this.номерТелефонаDataGridViewTextBoxColumn1.Name = "номерТелефонаDataGridViewTextBoxColumn1";
+            this.номерТелефонаDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // возрастDataGridViewTextBoxColumn
             // 
             this.возрастDataGridViewTextBoxColumn.DataPropertyName = "Возраст";
             this.возрастDataGridViewTextBoxColumn.HeaderText = "Возраст";
             this.возрастDataGridViewTextBoxColumn.Name = "возрастDataGridViewTextBoxColumn";
+            this.возрастDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clientsBindingSource1
             // 

@@ -20,9 +20,9 @@ namespace Фгещк {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ProdDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ProductSDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ProdDataSet1 : global::System.Data.DataSet {
+    public partial class ProductSDataSet1 : global::System.Data.DataSet {
         
         private ProductNewDataTable tableProductNew;
         
@@ -30,7 +30,7 @@ namespace Фгещк {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ProdDataSet1() {
+        public ProductSDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Фгещк {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected ProdDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ProductSDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Фгещк {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ProdDataSet1 cln = ((ProdDataSet1)(base.Clone()));
+            ProductSDataSet1 cln = ((ProductSDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Фгещк {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ProdDataSet1";
+            this.DataSetName = "ProductSDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ProdDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/ProductSDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableProductNew = new ProductNewDataTable();
@@ -225,7 +225,7 @@ namespace Фгещк {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ProdDataSet1 ds = new ProdDataSet1();
+            ProductSDataSet1 ds = new ProductSDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -531,7 +531,7 @@ namespace Фгещк {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProdDataSet1 ds = new ProdDataSet1();
+                ProductSDataSet1 ds = new ProductSDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -763,7 +763,7 @@ namespace Фгещк {
         }
     }
 }
-namespace Фгещк.ProdDataSet1TableAdapters {
+namespace Фгещк.ProductSDataSet1TableAdapters {
     
     
     /// <summary>
@@ -942,7 +942,7 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Фгещк.Properties.Settings.Default.SampleConnectionString1;
+            this._connection.ConnectionString = global::Фгещк.Properties.Settings.Default.SampleConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -959,7 +959,7 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProdDataSet1.ProductNewDataTable dataTable) {
+        public virtual int Fill(ProductSDataSet1.ProductNewDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -972,9 +972,9 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProdDataSet1.ProductNewDataTable GetData() {
+        public virtual ProductSDataSet1.ProductNewDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProdDataSet1.ProductNewDataTable dataTable = new ProdDataSet1.ProductNewDataTable();
+            ProductSDataSet1.ProductNewDataTable dataTable = new ProductSDataSet1.ProductNewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -982,14 +982,14 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProdDataSet1.ProductNewDataTable dataTable) {
+        public virtual int Update(ProductSDataSet1.ProductNewDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProdDataSet1 dataSet) {
+        public virtual int Update(ProductSDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "ProductNew");
         }
         
@@ -1307,7 +1307,7 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(ProdDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ProductSDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._productNewTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ProductNew.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1326,7 +1326,7 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(ProdDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ProductSDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._productNewTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ProductNew.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1344,7 +1344,7 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(ProdDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ProductSDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._productNewTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ProductNew.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1386,7 +1386,7 @@ SELECT ID, Тип, Артикул, Название, Цена FROM ProductNew WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(ProdDataSet1 dataSet) {
+        public virtual int UpdateAll(ProductSDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

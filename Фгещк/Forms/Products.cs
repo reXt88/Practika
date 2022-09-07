@@ -26,8 +26,8 @@ namespace Фгещк.Forms
         
         private void Products_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "prodDataSet1.ProductNew". При необходимости она может быть перемещена или удалена.
-            this.productNewTableAdapter.Fill(this.prodDataSet1.ProductNew);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "productSDataSet1.ProductNew". При необходимости она может быть перемещена или удалена.
+            this.productNewTableAdapter.Fill(this.productSDataSet1.ProductNew);
             button3.Text = Entry.USER.Login;
         }
 
@@ -37,10 +37,10 @@ namespace Фгещк.Forms
             Model3 db = new Model3();
             ProductNew pr = db.ProductNew.ToList().Find(x=>x.Название==listBox1.Text);
             Entry.SUM = Entry.SUM + Convert.ToInt32(pr.Цена);
-            Entry.KORZ = Entry.KORZ + listBox1.Text + "\n";
+            Entry.KORZ = richTextBox1.Text;
             string [] masKORZ = Entry.KORZ.Split('\n');
             Entry.masKORZ = masKORZ;
-            MessageBox.Show("Товар добавлен в корзину");
+            //MessageBox.Show("Товар добавлен в корзину");
         }
 
         private void button3_Click(object sender, EventArgs e)

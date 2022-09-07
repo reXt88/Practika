@@ -33,7 +33,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.productNewBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.prodDataSet1 = new Фгещк.ProdDataSet1();
             this.productNewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productNewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,16 +43,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.productNewTableAdapter = new Фгещк.ProdDataSet1TableAdapters.ProductNewTableAdapter();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.productSDataSet1 = new Фгещк.ProductSDataSet1();
+            this.productNewBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.productNewTableAdapter = new Фгещк.ProductSDataSet1TableAdapters.ProductNewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -72,7 +74,7 @@
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.listBox1.DataSource = this.productNewBindingSource2;
+            this.listBox1.DataSource = this.productNewBindingSource3;
             this.listBox1.DisplayMember = "Название";
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
@@ -81,16 +83,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(414, 260);
             this.listBox1.TabIndex = 28;
-            // 
-            // productNewBindingSource2
-            // 
-            this.productNewBindingSource2.DataMember = "ProductNew";
-            this.productNewBindingSource2.DataSource = this.prodDataSet1;
-            // 
-            // prodDataSet1
-            // 
-            this.prodDataSet1.DataSetName = "ProdDataSet1";
-            this.prodDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productNewBindingSource
             // 
@@ -167,10 +159,6 @@
             this.comboBox1.Visible = false;
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
-            // productNewTableAdapter
-            // 
-            this.productNewTableAdapter.ClearBeforeFill = true;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
@@ -180,6 +168,20 @@
             this.richTextBox1.Size = new System.Drawing.Size(234, 260);
             this.richTextBox1.TabIndex = 39;
             this.richTextBox1.Text = "";
+            // 
+            // productSDataSet1
+            // 
+            this.productSDataSet1.DataSetName = "ProductSDataSet1";
+            this.productSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productNewBindingSource3
+            // 
+            this.productNewBindingSource3.DataMember = "ProductNew";
+            this.productNewBindingSource3.DataSource = this.productSDataSet1;
+            // 
+            // productNewTableAdapter
+            // 
+            this.productNewTableAdapter.ClearBeforeFill = true;
             // 
             // Products
             // 
@@ -199,13 +201,14 @@
             this.Name = "Products";
             this.Load += new System.EventHandler(this.Products_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productNewBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,9 +227,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource productNewBindingSource1;
-        private ProdDataSet1 prodDataSet1;
         private System.Windows.Forms.BindingSource productNewBindingSource2;
-        private ProdDataSet1TableAdapters.ProductNewTableAdapter productNewTableAdapter;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private ProductSDataSet1 productSDataSet1;
+        private System.Windows.Forms.BindingSource productNewBindingSource3;
+        private ProductSDataSet1TableAdapters.ProductNewTableAdapter productNewTableAdapter;
     }
 }
